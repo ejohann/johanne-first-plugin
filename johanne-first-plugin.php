@@ -28,4 +28,13 @@
     	return $title;
     }
 
+    add_shortcode('programCount', 'returnProgramCount');
+
+    function returnProgramCount(){
+
+    	$programs = wp_count_posts('program');
+
+    	return $programs->publish;
+    }
+
 ?>
